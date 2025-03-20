@@ -10,9 +10,14 @@ const Admin = () => {
   const [completedProsCount, setCompletedProsCount] = useState(0);
   const [applicationsCount, setApplicationsCount] = useState(0);
   const [usersCount, setUsersCount] = useState(0);
-
-
+ 
+  const usertype = localStorage.getItem('usertype');
+  if(usertype !== 'admin'){
+    navigate('/');
+  }
+  else{
   useEffect(()=>{
+   
     fetchProjects();
     fetchApplications();
     fetchUsers();
@@ -86,5 +91,5 @@ const fetchUsers = async() =>{
     </div>
   )
 }
-
+}
 export default Admin
