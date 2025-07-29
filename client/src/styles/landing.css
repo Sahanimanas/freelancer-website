@@ -31,6 +31,11 @@
     font-size: 2rem;
     color: rgb(255, 255, 255);
     font-family: 'Kaushan Script', cursive;
+    cursor: pointer; 
+}
+.landing-nav h3:hover{
+  color: rgb(177, 55, 55);
+   
 }
 
 .landing-nav button{

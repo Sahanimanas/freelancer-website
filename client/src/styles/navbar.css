@@ -1,4 +1,5 @@
 .navbar{
+  
 
     height: 10vh;
     align-items: center;
@@ -7,20 +8,28 @@
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
     /* background-color: #141414; */
 }
-
+/* .navbar>.logo{
+    background: #ff0000;
+cursor: pointer;
+} */
 .navbar h3{
 
     color: #ee4950;
     margin: 0;
+    cursor: pointer;
+    
+    
 }
+
 
 .nav-options{
     display: flex;
-    width: 40%;
+    width: 50%;
     justify-content: space-evenly;
 }
 
 .nav-options p{
+   
     margin: 0;
     color: rgb(137, 135, 135);
     cursor: pointer;

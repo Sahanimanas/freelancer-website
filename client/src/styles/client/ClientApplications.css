@@ -9,10 +9,6 @@
 }
 
 
-.client-applications-page span h3{
-
-
-}
 
 
 .client-applications-page span select{
@@ -78,9 +74,7 @@
     color: rgba(9, 55, 86, 0.877);
 }
 
-.client-application-half span p{
 
-}
 
 .client-application-half span .application-skills{
     display: flex;

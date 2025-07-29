@@ -7,6 +7,9 @@ import { Application, Chat, Freelancer, Project, User } from './Schema.js';
 import { Server } from 'socket.io';
 import http from 'http';
 import SocketHandler from './SocketHandler.js';
+import 'dotenv/config';
+import { configDotenv } from 'dotenv';
+configDotenv();
 
 const app = express();
 
@@ -32,12 +35,12 @@ io.on("connection", (socket) =>{
 })
 
 
-const PORT = 6001;
+const PORT = process.env.PORT || 6001;
 
-mongoose.connect('mongodb://127.0.0.1:27017/freelancing',{
+mongoose.connect(process.env.MONGO_URL, {
 }).then(()=>{
 
-
+console.log("Connected to MongoDB");
     app.post('/register', async (req, res) =>{
         try{
     

@@ -23,8 +23,12 @@ import AdminProjects from './pages/admin/AdminProjects'
 import AllApplications from './pages/admin/AllApplications'
 import AllUsers from './pages/admin/AllUsers'
 
+import Protectedroute from './pages/Protectedroute';
+
+
 
 function App() {
+  
   return (
     <div className="App">
 
@@ -32,9 +36,10 @@ function App() {
      
      <Routes>
 
-        <Route exact path='/' element={<Landing />} />
-        <Route path='/authenticate' element={<Authenticate />} />
-
+        <Route path='/' element={<Landing />} />
+        <Route path='/authenticate' element={<Authenticate  />} />
+         
+       <Route element = {<Protectedroute/>}>
         <Route path='/freelancer' element={<Freelancer />} />
         <Route path='/all-projects' element={<AllProjects />} />
         <Route path='/my-projects' element={<MyProjects />} /> 
@@ -50,9 +55,8 @@ function App() {
         <Route path='/admin' element={<Admin />} />
         <Route path='/admin-projects' element={<AdminProjects />} />
         <Route path='/admin-applications' element={<AllApplications />} />
-        <Route path='/all-users' element={<AllUsers />} />
-
-
+        <Route path='/all-users' element={<AllUsers />} /> 
+        </Route>
      </Routes>
     </div>
   );

@@ -13,7 +13,7 @@ const GeneralContextProvider = ({children}) => {
 
 
   const navigate = useNavigate();
-
+const [isloggedin,setIsloggedin]  =  useState(false);
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -25,13 +25,14 @@ const GeneralContextProvider = ({children}) => {
   const login = async () =>{
     try{
       const loginInputs = {email, password}
-        await axios.post('http://localhost:6001/login', loginInputs)
+        await axios.post(`${import.meta.env.VITE_API_URL}/login`, loginInputs)
         .then( async (res)=>{
 
           localStorage.setItem('userId', res.data._id);
             localStorage.setItem('usertype', res.data.usertype);
             localStorage.setItem('username', res.data.username);
             localStorage.setItem('email', res.data.email);
+            setIsloggedin(true)
             if(res.data.usertype === 'freelancer'){
                 navigate('/freelancer');
             } else if(res.data.usertype === 'client'){
@@ -53,13 +54,13 @@ const GeneralContextProvider = ({children}) => {
 
   const register = async () =>{
     try{
-        await axios.post('http://localhost:6001/register', inputs)
+        await axios.post(`${import.meta.env.VITE_API_URL}/register`, inputs)
         .then( async (res)=>{
             localStorage.setItem('userId', res.data._id);
             localStorage.setItem('usertype', res.data.usertype);
             localStorage.setItem('username', res.data.username);
             localStorage.setItem('email', res.data.email);
-
+            setIsloggedin(true)
             if(res.data.usertype === 'freelancer'){
               navigate('/freelancer');
           } else if(res.data.usertype === 'client'){
@@ -81,6 +82,7 @@ const GeneralContextProvider = ({children}) => {
   const logout = async () =>{
     
     localStorage.clear();
+    setIsloggedin(false)
     for (let key in localStorage) {
       if (localStorage.hasOwnProperty(key)) {
         localStorage.removeItem(key);
@@ -92,7 +94,7 @@ const GeneralContextProvider = ({children}) => {
 
 
   return (
-    <GeneralContext.Provider value={{socket, login, register, logout, username, setUsername, email, setEmail, password, setPassword, usertype, setUsertype}} >{children}</GeneralContext.Provider>
+    <GeneralContext.Provider value={{socket,setIsloggedin,isloggedin ,login, register, logout, username, setUsername, email, setEmail, password, setPassword, usertype, setUsertype}} >{children}</GeneralContext.Provider>
   )
 }
 

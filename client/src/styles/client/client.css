@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-evenly;
     margin-top: 5vh;
+    background-image: url("../images/login.jpg");
 }
 
 .client-projects-header{
@@ -10,6 +11,7 @@
     height: 8vh;
     justify-content: space-between;
     align-items: center;
+    background-image: url("../images/login.jpg");
 }
 .client-projects-header select{
 
@@ -37,10 +39,6 @@
     color: rgb(95, 96, 97);
 }
 
-.client-projects-list h3{
-
-
-}
 
 .listed-project:hover{
     background-color: #efefef58;
@@ -102,12 +100,3 @@
     margin-top: 3vh;
 }
 
-.listed-project .bids-data p{
-
-    
-}
-
-.listed-project .bids-data h6{
-
-    
-}

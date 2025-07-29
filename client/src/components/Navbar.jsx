@@ -20,7 +20,7 @@ const Navbar = () => {
 
       {usertype === 'freelancer' ?
           <div className="navbar">
-            <h3>SB Works</h3>
+            <h3 >WorkX</h3>
     
             <div className="nav-options">
                 <p onClick={()=> navigate('/freelancer')} >Dashboard</p>
@@ -37,7 +37,7 @@ const Navbar = () => {
       {
         usertype === 'client' ?
           <div className="navbar">
-            <h3>SB Works</h3>
+            <h3>WorkX</h3>
 
             <div className="nav-options">
                 <p onClick={()=> navigate('/client')} >Dashboard</p>
@@ -53,7 +53,7 @@ const Navbar = () => {
       
       {usertype === 'admin' ?
           <div className="navbar">
-            <h3>SB Works (admin)</h3>
+            <h3>WorkX (admin)</h3>
     
             <div className="nav-options">
                 <p onClick={()=> navigate('/admin')} >Home</p>
