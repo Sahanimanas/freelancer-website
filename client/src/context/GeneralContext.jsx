@@ -25,7 +25,7 @@ const [isloggedin,setIsloggedin]  =  useState(false);
   const login = async () =>{
     try{
       const loginInputs = {email, password}
-        await axios.post(`${import.meta.env.VITE_API_URL}/login`, loginInputs)
+        await axios.post(`${WS}/login`, loginInputs)
         .then( async (res)=>{
 
           localStorage.setItem('userId', res.data._id);
@@ -54,7 +54,7 @@ const [isloggedin,setIsloggedin]  =  useState(false);
 
   const register = async () =>{
     try{
-        await axios.post(`${import.meta.env.VITE_API_URL}/register`, inputs)
+        await axios.post(`${WS}/register`, inputs)
         .then( async (res)=>{
             localStorage.setItem('userId', res.data._id);
             localStorage.setItem('usertype', res.data.usertype);
