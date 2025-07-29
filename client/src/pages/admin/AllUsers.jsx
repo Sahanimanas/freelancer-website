@@ -8,7 +8,7 @@ const AllUsers = () => {
   const [users, setUsers] = useState([]);
 
   const fetchUsers = async() =>{
-    await axios.get("http://localhost:6001/fetch-users").then(
+    await axios.get(`${import.meta.env.VITE_API_URL}/fetch-users`).then(
       (response)=>{
           setUsers(response.data);
       }

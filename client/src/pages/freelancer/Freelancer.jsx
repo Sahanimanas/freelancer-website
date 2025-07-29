@@ -27,7 +27,7 @@ const Freelancer = () => {
   },[])
 
   const fetchUserData = async(id) =>{
-      axios.get(`http://localhost:6001/fetch-freelancer/${id}`).then(
+      axios.get(`${import.meta.env.VITE_API_URL}/fetch-freelancer/${id}`).then(
         (response)=>{
           setFreelancerData(response.data);
           if(response.data){
@@ -42,7 +42,7 @@ const Freelancer = () => {
   }
 
   const updateUserData = async() =>{
-    axios.post(`http://localhost:6001/update-freelancer`, {freelancerId, updateSkills: updateSkills, description: updateDescription}).then(
+    axios.post(`${import.meta.env.VITE_API_URL}/update-freelancer`, {freelancerId, updateSkills: updateSkills, description: updateDescription}).then(
         (response)=>{
           fetchUserData();
           alert("User data updated")
@@ -58,7 +58,7 @@ const Freelancer = () => {
   },[])
 
   const fetchApplications = async() =>{
-    await axios.get("http://localhost:6001/fetch-applications").then(
+    await axios.get(`${import.meta.env.VITE_API_URL}/fetch-applications`).then(
       (response)=>{
         setApplicationsCount(response.data.filter((application)=> application.freelancerId === localStorage.getItem('userId')));
         console.log(response.data);

@@ -7,9 +7,9 @@ export const GeneralContext = createContext();
 
 const GeneralContextProvider = ({children}) => {
 
-  const WS = 'http://localhost:6001';
 
-  const socket = socketIoClient(WS);
+
+  const socket = socketIoClient(`${import.meta.env.VITE_API_URL}`);
 
 
   const navigate = useNavigate();
@@ -25,7 +25,7 @@ const [isloggedin,setIsloggedin]  =  useState(false);
   const login = async () =>{
     try{
       const loginInputs = {email, password}
-        await axios.post(`${WS}/login`, loginInputs)
+        await axios.post(`${import.meta.env.VITE_API_URL}/login`, loginInputs)
         .then( async (res)=>{
 
           localStorage.setItem('userId', res.data._id);
@@ -54,7 +54,7 @@ const [isloggedin,setIsloggedin]  =  useState(false);
 
   const register = async () =>{
     try{
-        await axios.post(`${WS}/register`, inputs)
+        await axios.post(`${import.meta.env.VITE_API_URL}/register`, inputs)
         .then( async (res)=>{
             localStorage.setItem('userId', res.data._id);
             localStorage.setItem('usertype', res.data.usertype);

@@ -14,7 +14,7 @@ const NewProject = () => {
     const navigate = useNavigate();
 
     const handleSubmit = async() =>{
-      await axios.post("http://localhost:6001/new-project", {title, description, budget, skills, clientId: localStorage.getItem('userId'),  clientName: localStorage.getItem('username'),  clientEmail: localStorage.getItem('email')}).then(
+      await axios.post(`${import.meta.env.VITE_API_URL}/new-project`, {title, description, budget, skills, clientId: localStorage.getItem('userId'),  clientName: localStorage.getItem('username'),  clientEmail: localStorage.getItem('email')}).then(
         (response)=>{
             alert("new project added!!");
             setTitle('');

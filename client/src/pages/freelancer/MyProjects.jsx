@@ -16,7 +16,7 @@ const MyProjects = () => {
   },[])
 
   const fetchProjects = async()=>{
-    await axios.get('http://localhost:6001/fetch-projects').then(
+    await axios.get(`${import.meta.env.VITE_API_URL}/fetch-projects`).then(
       (response)=>{
         const pros = response.data.filter(pro=> pro.freelancerId === localStorage.getItem('userId'));
         setProjects(pros);

@@ -14,7 +14,7 @@ const ProjectApplications = () => {
   },[])
 
   const fetchApplications = async() =>{
-    await axios.get("http://localhost:6001/fetch-applications").then(
+    await axios.get(`${import.meta.env.VITE_API_URL}/fetch-applications`).then(
       (response)=>{
         setApplications(response.data.filter((application)=> application.clientId === localStorage.getItem('userId')));
         setDisplayApplications(response.data.filter((application)=> application.clientId === localStorage.getItem('userId')).reverse());
