@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect,useContext } from 'react'
 import '../styles/landing.css'
 import {PiStudent} from 'react-icons/pi'
 import {FaHandHoldingWater} from 'react-icons/fa'
