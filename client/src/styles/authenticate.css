@@ -59,6 +59,7 @@
     font-family: 'Work Sans', sans-serif;
 
     background-color: rgba(255, 255, 255, 0.263);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     border-radius: 0.5rem;
