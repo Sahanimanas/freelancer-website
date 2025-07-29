@@ -8,10 +8,10 @@
 
 .landing-hero{
 
-    background: url('../images/landing-bg.jpg');
+    background: url('https://imgs.search.brave.com/yjpizAnt5jSnkiZ-hClK-YSNY9O2D8LLFCqL1-_5Ewk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5saWNkbi5jb20v/ZG1zL2ltYWdlL0M1/NjEyQVFGblExMGtt/RFZ1NncvYXJ0aWNs/ZS1jb3Zlcl9pbWFn/ZS1zaHJpbmtfNjAw/XzIwMDAvMC8xNTIw/MDYxNjMxNzMwP2U9/MjE0NzQ4MzY0NyZ2/PWJldGEmdD1PR3Ru/QkY5YVBLZ21kMmF6/OWktS2FRQ2NmNTI3/bTVibTJMZEhYMm9I/bWtz');
     height: 100vh;
     width: 100%;
-    background-position: center;
+
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -34,7 +34,7 @@
     cursor: pointer; 
 }
 .landing-nav h3:hover{
-  color: rgb(177, 55, 55);
+  color: rgb(0, 0, 0);
    
 }
 
@@ -42,7 +42,7 @@
 
     padding: 10px 30px;
     font-size: 1rem;
-    background-color: #c9ced200;
+    background-color: #0e7eda00;
     border: 1.5px solid #f1e1e1;
     color: #eddcdc;
     border-radius: 3rem;
@@ -54,7 +54,7 @@
 
     padding: 10px 30px;
     font-size: 1rem;
-    background-color: #f4dada43;
+    background-color: #3224f1bb;
     border: 1.5px solid #da4a4a43;
     color: #ffffffee;
 
@@ -92,8 +92,8 @@
     padding: 10px 30px;
     font-size: 1rem;
     background-color: #c9ced200;
-    border: 1.5px solid #e1d5d5ab;
-    color: #e1d5d5ab;
+    border: 1.5px solid #ffffff;
+    color: #ffffff;
     border-radius: 3rem;
     font-family: 'Poppins', sans-serif;
     cursor: pointer;
@@ -103,9 +103,9 @@
 
     padding: 10px 30px;
     font-size: 1rem;
-    background-color: #c5d0d821;
+    background-color: #1328e099;
     border: 1.5px solid #e1d5d567;
-    color: #e1d5d5c4;
+    color: #ffffff;
     border-radius: 3rem;
     font-family: 'Poppins', sans-serif;
     cursor: pointer;

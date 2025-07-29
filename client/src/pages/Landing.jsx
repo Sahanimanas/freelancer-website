@@ -35,8 +35,8 @@ const Landing = () => {
 
             <div className="landing-hero-text">
 
-                <h1>Empower Your Journey: Elevate Your Craft on SB Works</h1>
-                <p>Dive into a realm of endless possibilities with SB Works. Unleash your creativity, skills, and passion as you embark on a freelancing journey like never before. Our platform is a thriving marketplace where innovation meets opportunity, connecting talented freelancers with businesses seeking excellence. </p>
+                <h1>Empower Your Journey: Elevate Your Craft on WorkX</h1>
+                <p>Dive into a realm of endless possibilities with WorkX. Unleash your creativity, skills, and passion as you embark on a freelancing journey like never before. Our platform is a thriving marketplace where innovation meets opportunity, connecting talented freelancers with businesses seeking excellence. </p>
                 <button onClick={()=> navigate('/authenticate')}>Join Now</button>
             </div>
 
