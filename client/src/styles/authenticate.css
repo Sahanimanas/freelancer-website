@@ -59,8 +59,8 @@
     font-family: 'Work Sans', sans-serif;
 
     background-color: rgba(255, 255, 255, 0.263);
-    /* backdrop-filter: blur(10px); */
-    box-shadow: rgba(0, 179, 255, 0.12) 10px 20px 50px 0px, rgba(16, 157, 218, 0.32) 0px 2px 20px 0px;
+    backdrop-filter: blur(10px);
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     border-radius: 0.5rem;
 
 }

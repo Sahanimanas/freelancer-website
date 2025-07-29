@@ -20,7 +20,7 @@ const Navbar = () => {
 
       {usertype === 'freelancer' ?
           <div className="navbar">
-            <h3 >WorkX</h3>
+            <h3>SB Works</h3>
     
             <div className="nav-options">
                 <p onClick={()=> navigate('/freelancer')} >Dashboard</p>
