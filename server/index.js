@@ -36,14 +36,15 @@ io.on("connection", (socket) =>{
 })
 
 
-const PORT = process.env.PORT || 6001;
 
-mongoose.connect(process.env.MONGO_URL, {
-}).then(()=>{
-        app.get('/', (req, res) => {
+mongoose.connect(process.env.MONGO_URL)
+    .then(() => console.log("MongoDB connection established."))
+    .catch((e) => console.log(`Error in db connection: ${e}`));
+
+  app.get('/', (req, res) => {
             res.send("Server is running");
         });
-        console.log("Connected to MongoDB");
+       
     app.post('/register', async (req, res) =>{
         try{
     
@@ -405,7 +406,6 @@ mongoose.connect(process.env.MONGO_URL, {
     })
 
 
-    server.listen(PORT, ()=>{
-        console.log(`Running @ ${PORT}`);
-    });
-}).catch((e)=> console.log(`Error in db connection ${e}`));
+  // --- SERVER LISTENING BLOCK ---
+const PORT = process.env.PORT || 6001;
+app.listen(PORT, () => console.log(`Server running on port: ${PORT}`));
